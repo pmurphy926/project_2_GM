@@ -5,11 +5,11 @@
 </head>
 <body>
     <header>
-        <h1>Player Detail</h1>
+        <h1>⚾️ Player Detail</h1>
         <div class="nav-dropdown" onclick="myFunction(this)">
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
-            <div class="hamburger-line"></div>
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </div>
     </header>
     <main>
@@ -21,13 +21,13 @@
                 <img class="info-image" src="<%=players.img%>" alt="">
             </div>
             <div class="info-container">
-                <p>Position: <%=players.position%></p>
-                <p>Bats/Throws: <%=players.hands%></p>
-                <p>Height: <%=players.height%></p>
-                <p>Weight: <%=players.weight%> lbs</p>
-                <p>Contract Years Remaining: <%=players.years%></p>
-                <p>Season Salary: $<%=players.salary%></p>
-                <p>Traits: <%=players.tags%></p>
+                <p><span class="player-info-show">Position: </span><%=players.position%></p>
+                <p><span class="player-info-show">Bats/Throws: </span><%=players.hands%></p>
+                <p><span class="player-info-show">Height: </span><%=players.height%></p>
+                <p><span class="player-info-show">Weight: </span><%=players.weight%> lbs</p>
+                <p><span class="player-info-show">Contract Years Remaining: </span><%=players.years%></p>
+                <p><span class="player-info-show">Season Salary: </span>$<%=players.salary%></p>
+                <p><span class="player-info-show">Traits: </span><%=players.tags%></p>
                 <a href="/gm/<%=players.id%>/edit">
                     <button class="edit">Edit</button>
                 </a><br>

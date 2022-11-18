@@ -321,7 +321,7 @@ module.exports = [
     number: '17',
     img: 'https://i.imgur.com/AHhw3pD.png',
     position: 'SP',
-    hands: 'L/6',
+    hands: 'L/R',
     height: `6'0"`,
     weight: 190,
     contract: false,

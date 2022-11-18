@@ -2,4 +2,5 @@ function myFunction(x) {
     x.classList.toggle("change");
   }
 
-  myFunction(x);
+
+// console.log('js is connected')

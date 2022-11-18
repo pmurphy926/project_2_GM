@@ -1,20 +1,38 @@
 /* Universal
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+body {
+    height: 100%;
+    background-color: #383737;
+}
+
 a {
     text-decoration: none;
-    color: black;
+}
+
+h1, h2, h3 {
+    font-family: 'Red Hat Text', sans-serif;
+    color: #60c3cc;
+}
+
+th {
+    color: rgb(239, 76, 41);
+}
+
+p, a, td, button {
+    font-family: 'Barlow', sans-serif;
+    color: white;
 }
 
 a:hover {
-    color:darksalmon
+    color: rgb(239, 76, 41);
 }
 
 a:visited {
-    color: black;
+    color: white;
 }
 
 a:visited:hover {
-    color: darksalmon;
+    color:  rgb(239, 76, 41);
 }
 
 button {
@@ -23,6 +41,15 @@ button {
     margin: 2px;
     width: 150px;
     cursor: pointer;
+    background-color: transparent;
+    color: #60c3cc;
+    border: 1px solid #60c3cc;
+}
+
+button:hover {
+    background-color: transparent;
+    color: rgb(239, 76, 41);
+    border: 1px solid rgb(239, 76, 41);;
 }
 
 /* Header
@@ -30,6 +57,19 @@ button {
 header {
     display: flex;
     justify-content: space-between;
+    position: sticky;
+    background-color: transparent;
+    border-bottom: 2px solid #399098;
+    margin-right: 1%;
+    margin-left: 1%;
+}
+
+.icon {
+    width: 5%;
+}
+
+.header-span {
+    display: inline;
 }
 
 .nav-dropdown:hover {
@@ -38,14 +78,15 @@ header {
 
 header h1 {
     margin-top: 0;
+    margin-bottom: 5px;
 }
 
 /* Hamburger (styling and js adapted from W3schools)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.hamburger-line {
+.bar1, .bar2, .bar3 {
     width: 35px;
     height: 5px;
-    background-color: black;
+    background-color: #60c3cc;
     margin: 6px 0;
   }
 
@@ -81,10 +122,10 @@ header h1 {
     margin-right: auto;
 }
 
-th,td {
+th, td {
   padding: 12px 15px;
   text-align: center;
-  border-bottom: 1px solid #E1E1E1;
+  border-bottom: 1px solid #60c3cc;
 }
 
 td {
@@ -102,7 +143,7 @@ th:last-child, td:last-child {
 .player-index-image {
     width: 40px;
     border-radius: 25px;
-    border: 1px solid black;
+    border: 1px solid rgb(239, 76, 41);;
 }
 
 .jersey {
@@ -174,10 +215,15 @@ input {
     text-align: center;
 }
 
+.player-info-show {
+    color: rgb(239, 76, 41);
+}
+
 /* Roster
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .players {
     text-align: center;
+    margin-top: 2%;
 }
 
 .new-btn {
