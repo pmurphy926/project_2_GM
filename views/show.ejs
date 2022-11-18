@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <h1>Player Detail</h1>
+        <div class="nav-dropdown" onclick="myFunction(this)">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </header>
+    <main>
+        <div class="show-heading">
+            <h2><%=players.name%> #<%=players.number%></h2>
+        </div>
+        <div class="info-flex-container">
+            <div class="info-image-container">
+                <img class="info-image" src="<%=players.img%>" alt="">
+            </div>
+            <div class="info-container">
+                <p>
+                    Position: <%=if (players.position === SP) {%>
+                        
+                </p>
+                
+                
+                <p>Bats/Throws: <%=players.hands%></p>
+                <p>Height: <%=players.height%></p>
+                <p>Weight: <%=players.weight%> lbs</p>
+                <p>Contract Years Remaining: <%=players.years%></p>
+                <p>Season Salary: $<%=players.salary%></p>
+                <p>Traits: <%=players.tags%></p>
+                <a href="/gm/<%=players.id%>/edit">
+                    <button class="edit">Edit</button>
+                </a>
+                <form action="/gm/<%=players.id%>?_method=DELETE" method="POST">
+                    <input type="submit" value="Release">
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

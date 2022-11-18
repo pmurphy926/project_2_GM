@@ -35,7 +35,11 @@ app.get('/roster', (req, res) => {
 })
 
 //Read Route - Show
-
+app.get('/gm/:id', (req, res) => {
+    Player.findById(req.params.id, (err, foundPlayer) => {
+        res.render('show.ejs', {players: foundPlayer})
+    })
+})
 //*******************SITE FUNCTIONS*******************/
 function myFunction(x) {
     x.classList.toggle("change");

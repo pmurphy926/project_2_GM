@@ -70,6 +70,8 @@ th:last-child, td:last-child {
 
 .player-index-image {
     width: 40px;
+    border-radius: 25px;
+    border: 1px solid black;
 }
 
 .jersey {
@@ -78,4 +80,32 @@ th:last-child, td:last-child {
 
 .player-link {
     margin-left: 0;
+}
+
+/* Show
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.info-image {
+    width: 50%;
+}
+
+.info-flex-container {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.info-image-container {
+    align-self: flex-end;
+    flex-basis: 50%;
+    text-align: right;
+    margin-right: 15px;
+}
+
+.info-container {
+    align-self: flex-start;
+    flex-basis: 50%;
+}
+
+.show-heading {
+    text-align: center;
 }

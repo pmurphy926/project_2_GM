@@ -12,7 +12,7 @@ module.exports = [
     contract: true,
     years: 4,
     salary: 25000000,
-    tags: ['workhorse', 'ace', 'heat', ''],
+    tags: ['workhorse', 'ace', 'high velocity',],
     starter: true,
     },
 
