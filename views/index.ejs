@@ -1,12 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>General Manager</title>
+    <%- include ('../partials/head.ejs') %>
 </head>
 <body>
-    
+    <header>
+        <h1>General Manager</h1>
+        <div class="nav-dropdown" onclick="myFunction(this)">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </header>
+    <main>
+        <div class="baseball-diamond">
+            <img class="baseball-diamond-image" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/76536/baseball-diamond-clipart-xl.png" alt="baseball diamond diagram">
+        </div>
+    </main>
 </body>
 </html>

@@ -12,9 +12,6 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 
 //***********************DATABASE**********************/
-
-
-//************************ROUTES**********************/
 // Seed Route
 app.get('/seed', (req, res) => {
     Player.create(playerSeed, (err, data) => {
@@ -22,13 +19,18 @@ app.get('/seed', (req, res) => {
     })
 })
 
+//************************ROUTES**********************/
 // Read Route - Index
-// app.get('/gm', (req, res) => {
-//     Player.find({}, (err, player) => {
-//         res.render('index.ejs', {players:player})
-//     })
-// })
+app.get('/gm', (req, res) => {
+    Player.find({}, (err, player) => {
+        res.render('index.ejs', {players:player})
+    })
+})
 
+//*******************SITE FUNCTIONS*******************/
+function myFunction(x) {
+    x.classList.toggle("change");
+  }
 
 //**********************LISTENERS********************/
 if(process.env.PORT){

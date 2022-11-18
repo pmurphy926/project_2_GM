@@ -1,0 +1,37 @@
+header {
+    display: flex;
+}
+
+.nav-dropdown {
+    align-self: flex-start;
+}
+.nav-dropdown:hover {
+    cursor: pointer;
+}
+
+.hamburger-line {
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+  }
+
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+  }
+  
+.change .bar2 {
+    opacity: 0;
+}
+  
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+  }
+  
+.baseball-diamond {
+    text-align: center;
+}
+
+.baseball-diamond-image {
+    width: 60%;
+}
