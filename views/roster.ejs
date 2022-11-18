@@ -26,10 +26,10 @@
                     </tr>
                     <%for (let i= 0; i < players.length; i++) {%>
                     <tr>
-                        <td>
+                        <td class="player-thumb">
                             <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
                         </td>
-                        <td>
+                        <td class="player-name">
                             <a class="player-link" href="/gm/<%=players[i].id%>">
                             <%=players[i].name%></a><span class="jersey">(<%=players[i].number%>)</span>
                             
@@ -44,7 +44,7 @@
                             <%=players[i].height%>
                         </td>
                         <td>
-                            <%=players[i].weight%>
+                            <%=players[i].weight%> lbs.
                         </td>
                     </tr>
                     <% } %> 

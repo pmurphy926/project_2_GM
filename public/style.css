@@ -1,3 +1,24 @@
+/* Universal
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color:darksalmon
+}
+
+a:visited {
+    color: black;
+}
+
+a:visited:hover {
+    color: darksalmon;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
     display: flex;
 }
@@ -9,7 +30,7 @@ header {
     cursor: pointer;
 }
 
-/* Hamburger Styling and js adapted from W3schools
+/* Hamburger (styling and js adapted from W3schools)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .hamburger-line {
     width: 35px;
@@ -43,7 +64,7 @@ header {
     z-index: 1;
 }
 
-/* Table Styling adapted from Bootstrap skeleton
+/* Table (styling adapted from Bootstrap)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .player-index-table {
     margin-left: auto;
@@ -52,7 +73,7 @@ header {
 
 th,td {
   padding: 12px 15px;
-  text-align: left;
+  text-align: center;
   border-bottom: 1px solid #E1E1E1;
 }
 
@@ -76,13 +97,23 @@ th:last-child, td:last-child {
 
 .jersey {
     margin-left: 5px;
+    color: lightgray;
 }
 
 .player-link {
     margin-left: 0;
 }
 
-/* Show
+.player-thumb {
+    text-align: right;
+}
+
+.player-name {
+    padding-left: 0;
+    text-align: left;
+}
+
+/* Show (adapted from partner lab from Week 5)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .info-image {
     width: 50%;
@@ -108,4 +139,30 @@ th:last-child, td:last-child {
 
 .show-heading {
     text-align: center;
+}
+
+/* Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Show Page (adapted from partner lab from Week 5) */
+@media (max-width: 500px) {
+    .info-flex-container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .info-image-container {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .info-container {
+        align-self: flex-start;
+        flex-basis: 100;
+    }
+
+    .info-image {
+        width: 90%;
+    }
 }

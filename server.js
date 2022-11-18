@@ -40,6 +40,13 @@ app.get('/gm/:id', (req, res) => {
         res.render('show.ejs', {players: foundPlayer})
     })
 })
+
+//Update - Edit
+app.get('/gm/:id/edit', (req, res) => {
+    Player.findById(req.params.id, (err, foundPlayer)=>{ 
+        res.render('edit.ejs', {players: foundPlayer})
+    })
+})
 //*******************SITE FUNCTIONS*******************/
 function myFunction(x) {
     x.classList.toggle("change");
