@@ -21,7 +21,7 @@ app.get('/seed', (req, res) => {
 
 //************************ROUTES**********************/
 // Read Route - Home Index
-app.get('/gm', (req, res) => {
+app.get('/', (req, res) => {
     Player.find({}, (err, player) => {
         res.render('index.ejs', {players:player})
     })
@@ -47,10 +47,6 @@ app.get('/gm/:id/edit', (req, res) => {
         res.render('edit.ejs', {players: foundPlayer})
     })
 })
-//*******************SITE FUNCTIONS*******************/
-function myFunction(x) {
-    x.classList.toggle("change");
-  }
 
 //**********************LISTENERS********************/
 if(process.env.PORT){
