@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <h1>Full Roster</h1>
+        <div class="nav-dropdown" onclick="myFunction(this)">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </header>
+    <main>
+        <div class="players">
+            <table class="player-index-table">
+                <tbody>
+                    <tr class="table-head">
+                        <th>Players</th>
+                        <th></th>
+                        <th>Pos.</th>
+                        <th>B/T</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                    </tr>
+                    <%for (let i= 0; i < players.length; i++) {%>
+                    <tr>
+                        <td>
+                            <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
+                        </td>
+                        <td>
+                            <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <%=players[i].name%></a><span class="jersey">(<%=players[i].number%>)</span>
+                            
+                        </td>
+                        <td>
+                            <%=players[i].position%>
+                        </td>
+                        <td>
+                            <%=players[i].hands%>
+                        </td>
+                        <td>
+                            <%=players[i].height%>
+                        </td>
+                        <td>
+                            <%=players[i].weight%>
+                        </td>
+                    </tr>
+                    <% } %> 
+                </tbody>
+            </table>
+    </div>
+    </main>
+</body>
+</html>

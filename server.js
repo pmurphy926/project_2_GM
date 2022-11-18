@@ -20,12 +20,21 @@ app.get('/seed', (req, res) => {
 })
 
 //************************ROUTES**********************/
-// Read Route - Index
+// Read Route - Home Index
 app.get('/gm', (req, res) => {
     Player.find({}, (err, player) => {
         res.render('index.ejs', {players:player})
     })
 })
+
+// Read Route - Roster Index
+app.get('/roster', (req, res) => {
+    Player.find({}, (err, player) => {
+        res.render('roster.ejs', {players:player})
+    })
+})
+
+//Read Route - Show
 
 //*******************SITE FUNCTIONS*******************/
 function myFunction(x) {

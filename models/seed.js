@@ -49,7 +49,7 @@ module.exports = [
     {
     name: 'Anatoli Smorin',
     number: '6',
-    img: 'https://imgur.com/UIS7KiX',
+    img: 'https://i.imgur.com/UIS7KiX.png',
     position: '2B',
     hands: 'L/R',
     height: `6'0"`,
@@ -153,7 +153,7 @@ module.exports = [
 
     {
     name: 'Kevin Nogilny',
-    number: '22',
+    number: '29',
     img: 'https://i.imgur.com/lsMUi5G.png',
     position: 'SP',
     hands: 'L/R',
@@ -244,7 +244,7 @@ module.exports = [
     {
     name: 'Mike Truk',
     number: '31',
-    img: '',
+    img: 'https://i.imgur.com/0M14ZIc.png',
     position: '1B',
     hands: 'R/R',
     height: `6'5"`,
@@ -257,7 +257,7 @@ module.exports = [
     },
 
     {
-    name: 'Dwight Rortugal',
+    name: 'Dwigt Rortugal',
     number: '44',
     img: 'https://i.imgur.com/PmY6JyA.png',
     position: 'OF',

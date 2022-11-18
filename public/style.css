@@ -9,6 +9,8 @@ header {
     cursor: pointer;
 }
 
+/* Hamburger Styling and js adapted from W3schools
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .hamburger-line {
     width: 35px;
     height: 5px;
@@ -34,4 +36,46 @@ header {
 
 .baseball-diamond-image {
     width: 60%;
+}
+
+.roster {
+    display: grid;
+    z-index: 1;
+}
+
+/* Table Styling adapted from Bootstrap skeleton
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.player-index-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th,td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1;
+}
+
+td {
+    vertical-align: middle;
+}
+
+th:first-child, td:first-child {
+  padding-left: 0;
+}
+
+th:last-child, td:last-child {
+  padding-right: 0;
+}
+
+.player-index-image {
+    width: 40px;
+}
+
+.jersey {
+    margin-left: 5px;
+}
+
+.player-link {
+    margin-left: 0;
 }
