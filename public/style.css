@@ -17,17 +17,27 @@ a:visited:hover {
     color: darksalmon;
 }
 
+button {
+    border-radius: 10px;
+    padding: 15px;
+    margin: 2px;
+    width: 150px;
+    cursor: pointer;
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
     display: flex;
+    justify-content: space-between;
 }
 
-.nav-dropdown {
-    align-self: flex-start;
-}
 .nav-dropdown:hover {
     cursor: pointer;
+}
+
+header h1 {
+    margin-top: 0;
 }
 
 /* Hamburger (styling and js adapted from W3schools)
@@ -138,7 +148,8 @@ input {
 /* Show (adapted from partner lab from Week 5)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .info-image {
-    width: 50%;
+    width: 70%;
+    border-radius: 10px;
 }
 
 .info-flex-container {
@@ -185,13 +196,13 @@ input {
     }
 
     .info-image-container {
-        flex-basis: 100%;
         text-align: center;
     }
 
     .info-container {
         align-self: flex-start;
         flex-basis: 100;
+        margin: 0 auto;
     }
 
     .info-image {

@@ -30,13 +30,12 @@
                 <p>Traits: <%=players.tags%></p>
                 <a href="/gm/<%=players.id%>/edit">
                     <button class="edit">Edit</button>
-                </a>
+                </a><br>
+                <button>Release</button>
                 <form action="/gm/<%=players.id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Release">
+                    <button>Retire</button>
                 </form>
-                <form action="/gm/<%=players.id%>?_method=DELETE" method="POST">
-                    <input type="submit" value="Retire">
-                </form>
+                <button>Return to Roster</button>
             </div>
         </div>
     </main>
