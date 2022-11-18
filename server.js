@@ -20,6 +20,18 @@ app.get('/seed', (req, res) => {
 })
 
 //************************ROUTES**********************/
+//Create - New
+app.get('/gm/new', (req, res) => {
+    res.render('new.ejs')
+})
+
+//Create - Post
+app.post('/roster', (req, res) => {
+    Player.create(req.body, (err, data) => {
+            res.redirect('/roster');
+    })
+})
+
 // Read Route - Home Index
 app.get('/', (req, res) => {
     Player.find({}, (err, player) => {
@@ -45,6 +57,13 @@ app.get('/gm/:id', (req, res) => {
 app.get('/gm/:id/edit', (req, res) => {
     Player.findById(req.params.id, (err, foundPlayer)=>{ 
         res.render('edit.ejs', {players: foundPlayer})
+    })
+})
+
+//Update - Post
+app.put('/gm/:id', (req, res)=>{
+    Player.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedPlayer)=>{
+        res.redirect('/roster');
     })
 })
 

@@ -113,6 +113,28 @@ th:last-child, td:last-child {
     text-align: left;
 }
 
+/* form
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.form-center {
+    width: 400px;
+    margin: 0 auto;
+}
+
+input {
+    display: block;
+    width: 70%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.checkbox input{
+    display: inline;
+}
+
+.btn {
+    width: 35%;
+}
+
 /* Show (adapted from partner lab from Week 5)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .info-image {

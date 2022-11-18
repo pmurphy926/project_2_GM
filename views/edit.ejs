@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/style.css">
-    <script src="../public/app.js"></script>
-    <title>General Manager</title>
+    <%- include ('../partials/head.ejs') %>
 </head>
 <body>
     <header>
@@ -19,21 +14,23 @@
     </header>
     <main>
         <h2>Edit Player Info</h2>
-        <form action="/gm/<%=players.id%>?_method=PUT" method="POST">
-        <input type="text" name="name" value="<%=players.name%>">
-        <input type="number" name="number" value="<%=players.number%>">
-        <input type="text" name="img" value="<%=players.img%>">
-        <input type="text" name="position" value="<%=players.position%>">
-        <input type="text" name="hands" value="<%=players.hands%>">
-        <input type="text" name="height" value="<%=players.height%>">
-        <input type="text" name="weight" value="<%=players.weight%>">
-        <input type="checkbox" name="contract" value="<%=players.contract%>">
-        <input type="text" name="years" value="<%=players.years%>">
-        <input type="text" name="salary" value="<%=players.salary%>">
-        <input type="text" name="tags" value="<%=players.tags%>">
-        <input type="checkbox" name="starter" value="<%=players.starter%>">
-        <input type="submit" value="Update Album">
-    </form>
+        <div class="form-center">
+            <form action="/gm/<%=players.id%>?_method=PUT" method="POST">
+                <input type="text" name="name" value="<%=players.name%>">
+                <input type="number" name="number" value="<%=players.number%>">
+                <input type="text" name="img" value="<%=players.img%>">
+                <input type="text" name="position" value="<%=players.position%>">
+                <input type="text" name="hands" value="<%=players.hands%>">
+                <input type="text" name="height" value="<%=players.height%>">
+                <input type="number" name="weight" value="<%=players.weight%>">
+                <div class="checkbox">Contract:<input type="checkbox" name="contract" value="<%=players.contract%>"></div class="checkbox">
+                <input type="number" name="years" value="<%=players.years%>">
+                <input type="text" name="salary" value="<%=players.salary%>">
+                <input type="text" name="tags" value="<%=players.tags%>">
+                <div class="checkbox">Starter:<input type="checkbox" name="starter" value="<%=players.starter%>"></div>
+                <input class="btn" type="submit" value="Update Player">
+            </form>
+        </div>
     </main>
 </body>
 </html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <h1>Add Player</h1>
+        <div class="nav-dropdown" onclick="myFunction(this)">
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+            <div class="hamburger-line"></div>
+        </div>
+    </header>
+    <main>
+        <h2>Add Player</h2>
+        <div class="form-center">
+            <form action="/roster" method="POST">
+                <input type="text" name="name" placeholder="First and Last Name">
+                <input type="number" name="number" placeholder="0-99">
+                <input type="text" name="img" placeholder="Image URL">
+                <input type="text" name="position" placeholder="Position">
+                <input type="text" name="hands" placeholder="Bat Hand/Throw Hand">
+                <input type="text" name="height" placeholder="Feet/Inches">
+                <input type="text" name="weight" placeholder="Omit lbs.">
+                <input type="text" name="years" placeholder="Contract Years Remaining">
+                <input type="text" name="salary" placeholder="Salary (Omit $)">
+                <input type="text" name="tags" placeholder="Traits: power, speed, etc.">
+                <input class="btn" type="submit" placeholder="Add New Player">
+            </form>
+        </div>
+    </main>
+</body>
+</html>
