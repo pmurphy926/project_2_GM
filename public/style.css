@@ -163,6 +163,16 @@ input {
     text-align: center;
 }
 
+/* Roster
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.players {
+    text-align: center;
+}
+
+.new-btn {
+    margin-bottom: 10px;
+}
+
 /* Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 

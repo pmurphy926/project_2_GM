@@ -67,6 +67,13 @@ app.put('/gm/:id', (req, res)=>{
     })
 })
 
+//Delete - Retire Player
+app.delete('/gm/:id', (req, res)=>{
+    Player.findByIdAndRemove(req.params.id, (err, data)=>{
+        res.redirect('/roster');
+    });
+});
+
 //**********************LISTENERS********************/
 if(process.env.PORT){
 	PORT = process.env.PORT
