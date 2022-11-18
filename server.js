@@ -1,17 +1,39 @@
 //*******************DEPENDENCIES********************/
 const express = require('express');
 const mongoose = require('mongoose')
+const methodOverride = require('method-override')
+const Player = require('./models/playerSchema')
 const app = express();
-
+const playerSeed = require('./models/seed')
 let PORT = 3000;
+
+app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}));
+app.use(methodOverride('_method'))
+
+//***********************DATABASE**********************/
+
+
+//************************ROUTES**********************/
+// Seed Route
+app.get('/seed', (req, res) => {
+    Player.create(playerSeed, (err, data) => {
+        res.send(data)
+    })
+})
+
+// Read Route - Index
+// app.get('/gm', (req, res) => {
+//     Player.find({}, (err, player) => {
+//         res.render('index.ejs', {players:player})
+//     })
+// })
+
+
+//**********************LISTENERS********************/
 if(process.env.PORT){
 	PORT = process.env.PORT
 }
-
-app.get('/', (req, res) => {
-    res.send('hi')
-})
-
 app.listen(PORT, () => {
     console.log('listening...')
 })
