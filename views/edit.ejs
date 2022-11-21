@@ -6,14 +6,22 @@
 <body>
     <header>
         <h1>⚾️ Edit Player</h1>
-        <div class="nav-dropdown" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+        <div class="dropdown">
+            <!-- <div class="dropBtn" onclick="openDropdown(); myFunction(this);"></div> -->
+            <div class="dropBtn" onclick="myFunction(this); openDropdown()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div id="myDropdown" class="dropdown-content">
+                        <a class="dropdown-links" href="/">Home</a>
+                        <a class="dropdown-links" href="/roster">Roster</a>
+                        <a class="dropdown-links" href="/fa">Free Agents</a>
+                        <a class="dropdown-links" href="/gm/new">Add Player</a>
+                </div>
+            </div>
         </div>
     </header>
     <main>
-        <h2>Edit Player Info</h2>
         <div class="form-center">
             <form action="/gm/<%=players.id%>?_method=PUT" method="POST">
                 <input type="text" name="name" value="<%=players.name%>">
@@ -28,7 +36,7 @@
                 <input type="text" name="salary" value="<%=players.salary%>">
                 <input type="text" name="tags" value="<%=players.tags%>">
                 <div class="checkbox">Starter:<input type="checkbox" name="starter" value="<%=players.starter%>"></div>
-                <input class="btn" type="submit" value="Update Player">
+                <button>Update Player</button>
             </form>
         </div>
     </main>

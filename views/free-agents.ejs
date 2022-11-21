@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <h1>⚾️ Free Agents</h1>
+        <div class="nav-dropdown" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </header>
+    <main>
+        <div class="players">
+            <a href="/gm/new"><button class="new-btn">Add New Free Agent</button></a>
+            <table class="player-index-table">
+                <tbody>
+                    <tr class="table-head">
+                        <th>Players</th>
+                        <th></th>
+                        <th>Pos.</th>
+                        <th>B/T</th>
+                        <th>Height</th>
+                        <th>Weight</th>
+                    </tr>
+                    <%for (let i= 0; i < players.length; i++) {%>
+                    <tr>
+                        <% if (players[i].contract === false) {%>
+                        <td class="player-thumb">
+                            <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
+                        </td>
+                        <td class="player-name">
+                            <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <%=players[i].name%></a><span class="jersey">(<%=players[i].number%>)</span>
+                            
+                        </td>
+                        <td>
+                            <%=players[i].position%>
+                        </td>
+                        <td>
+                            <%=players[i].hands%>
+                        </td>
+                        <td>
+                            <%=players[i].height%>
+                        </td>
+                        <td>
+                            <%=players[i].weight%> lbs.
+                        </td>
+                    </tr>
+                    <% } } %>
+
+                </tbody>
+            </table>
+    </div>
+    </main>
+</body>
+</html>

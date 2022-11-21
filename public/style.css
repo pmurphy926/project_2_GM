@@ -64,18 +64,6 @@ header {
     margin-left: 1%;
 }
 
-.icon {
-    width: 5%;
-}
-
-.header-span {
-    display: inline;
-}
-
-.nav-dropdown:hover {
-    cursor: pointer;
-}
-
 header h1 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -88,20 +76,28 @@ header h1 {
     height: 5px;
     background-color: #60c3cc;
     margin: 6px 0;
+    transition: 0.4s;
   }
 
 .change .bar1 {
-    transform: translate(0, 11px) rotate(-45deg);
+    width: 20px;
+    transform: translate(13px, 22px) rotate(-45deg);
   }
   
 .change .bar2 {
-    opacity: 0;
+    transform: rotate(90deg);
 }
   
 .change .bar3 {
-    transform: translate(0, -11px) rotate(45deg);
-  }
-  
+    width: 20px;
+    transform: translate(2px, 0) rotate(45deg);
+}
+
+
+
+
+/* Home Page
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .baseball-diamond {
     text-align: center;
 }
@@ -114,6 +110,52 @@ header h1 {
     display: grid;
     z-index: 1;
 }
+
+/* Dropdown
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.dropdown {
+    display: flex;
+    cursor: pointer;
+  }
+
+.dropdown-content {
+    display: none;
+    float: right;
+    position: absolute;
+    color: #60c3cc;
+    background-color: transparent;
+    min-width: 125px;
+    z-index: 1;
+    animation: growDown 300ms ease-in-out;
+    transform: translate(-75px, 0);
+    text-align: right;
+    margin-top: 5px;
+    /* transform-origin: top center; */
+}
+  
+@keyframes growDown {
+    0% {
+        transform: scaleY(0)
+    }
+    80% {
+        transform: scaleY(1.1)
+    }
+    100% {
+        transform: scaleY(1)
+    }
+}
+
+.dropdown-links {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
 
 /* Table (styling adapted from Bootstrap)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -168,7 +210,8 @@ th:last-child, td:last-child {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .form-center {
     width: 400px;
-    margin: 0 auto;
+    margin: auto;
+    margin-top: 2%;
 }
 
 input {
@@ -184,6 +227,11 @@ input {
 
 .btn {
     width: 35%;
+}
+
+.checkbox {
+    color:#60c3cc;
+    margin-left: 4px;
 }
 
 /* Show (adapted from partner lab from Week 5)
@@ -213,6 +261,7 @@ input {
 
 .show-heading {
     text-align: center;
+    margin-top: 2%;
 }
 
 .player-info-show {
@@ -233,8 +282,9 @@ input {
 /* Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
-/* Show Page (adapted from partner lab from Week 5) */
+
 @media (max-width: 500px) {
+    /* Show Page (adapted from partner lab from Week 5) */
     .info-flex-container {
         display: flex;
         justify-content: space-between;

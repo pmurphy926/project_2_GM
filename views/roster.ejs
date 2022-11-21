@@ -27,6 +27,7 @@
                     </tr>
                     <%for (let i= 0; i < players.length; i++) {%>
                     <tr>
+                        <% if (players[i].contract === true) {%>
                         <td class="player-thumb">
                             <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
                         </td>
@@ -48,7 +49,8 @@
                             <%=players[i].weight%> lbs.
                         </td>
                     </tr>
-                    <% } %> 
+                    <% } } %>
+
                 </tbody>
             </table>
     </div>

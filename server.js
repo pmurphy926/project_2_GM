@@ -46,6 +46,13 @@ app.get('/roster', (req, res) => {
     })
 })
 
+// Read Route - Free Agent Index
+app.get('/fa', (req, res) => {
+    Player.find({}, (err, player) => {
+        res.render('free-agents.ejs', {players:player})
+    })
+})
+
 //Read Route - Show
 app.get('/gm/:id', (req, res) => {
     Player.findById(req.params.id, (err, foundPlayer) => {
