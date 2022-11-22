@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include ('../partials/head.ejs') %>
+</head>
+<body>
+    <header>
+        <h1>⚾️ Add Player</h1>
+        <div class="dropdown">
+            <div class="dropBtn" onclick="myFunction(this); openDropdown()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div id="myDropdown" class="dropdown-content">
+                <a class="dropdown-links" href="/">Home</a>
+                <a class="dropdown-links" href="/roster">Roster</a>
+                <a class="dropdown-links" href="/fa">Free Agents</a>
+                <a class="dropdown-links" href="/gm/new">Add Player</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="baseball-diamond">
+            <img class="baseball-diamond-image" src="/field.png" alt="baseball diamond">
+        </div>
+        <div class="roster">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === '1B' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-1B" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === '2B' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-2B" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'SS' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-SS" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === '3B' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-3B" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'C' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-C" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'SP' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-SP" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'LF' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-LF" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'CF' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-CF" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'RF' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb-home" id="player-thumb-RF" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+                <% } }%>
+        </div>
+    </main>
+</body>
+</html>

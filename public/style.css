@@ -101,25 +101,65 @@ header h1 {
 .baseball-diamond {
     text-align: center;
     margin-top: 2%;
+    position: fixed;
 }
 
 .baseball-diamond-image {
-    width: 60%;
+    width: 50%;
 }
 
 .roster {
     background-color: transparent;
-    display: grid;
     position: fixed;
     top: 70px;
 	bottom: 0;
-    height: 100%;
-	width: 100%;
+	width: 80%;
 	z-index: 1;
 }
 
 .player-thumb-home {
-    width: 7%;
+    width: 5%;
+    border-radius: 35px;
+}
+
+.player-thumb-home:hover {
+    transform: scale(1.5);
+}
+
+#player-thumb-1B {
+    transform: translateX(1500%) translateY(600%);
+}
+
+#player-thumb-2B {
+    transform: translateX(1300%) translateY(300%);
+}
+
+#player-thumb-SS {
+    transform: translateX(730%) translateY(300%);
+}
+
+#player-thumb-3B {
+    transform: translateX(550%) translateY(600%);
+}
+
+#player-thumb-C {
+    transform: translateX(770%) translateY(1050%);
+}
+
+#player-thumb-SP {
+    transform: translateX(665%) translateY(600%);
+}
+
+#player-thumb-LF {
+    transform: translateX(150%) translateY(200%);
+}
+
+#player-thumb-CF {
+    transform: translateX(450%) translateY(50%);
+}
+
+#player-thumb-RF {
+    transform: translateX(750%) translateY(200%);
 }
 
 /* Dropdown
@@ -136,9 +176,9 @@ header h1 {
     color: #60c3cc;
     background-color: transparent;
     min-width: 125px;
-    z-index: 1;
+    z-index: 2;
     animation: growDown 300ms ease-in-out;
-    transform: translate(-75px, 50px);
+    transform: translate(-75px, 10px);
     text-align: right;
     margin-top: 5px;
 }
@@ -156,7 +196,7 @@ header h1 {
 }
 
 .dropdown-links {
-    color: black;
+    color: #60c3cc;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -319,7 +359,7 @@ input {
 }
 
 
-/* Home Page (with Codepen Diamond)
+/* Home Page HTML and CSS from https://codepen.io/borigas/pen/jENGrK
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #field {
     position:absolute;
@@ -349,7 +389,7 @@ input {
     position:absolute;
     top: -120px;
     left: 155px;
-    height:669px;
+    height:670px;
     width:670px;
     border-left:2px solid white;
     border-bottom:2px solid white;
@@ -530,9 +570,16 @@ input {
 }
 
 #diamond-player-thumb-home-C {
-    width: 450%;
+    width: 475%;
     z-index: 2;
     transform: translateY(30px);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-2B {
+    width: 500%;
+    z-index: 1;
+    transform: rotate(45deg) translateX(100px) translateY(20px);
     border-radius: 35px;
 }
 

@@ -39,6 +39,13 @@ app.get('/', (req, res) => {
     })
 })
 
+// Read Route - Diamond Image
+app.get('/home', (req, res) => {
+    Player.find({}, (err, player) => {
+        res.render('home.ejs', {players:player})
+    })
+})
+
 // Read Route - Roster Index
 app.get('/roster', (req, res) => {
     Player.find({}, (err, player) => {

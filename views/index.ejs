@@ -4,7 +4,7 @@
     <%- include ('../partials/head.ejs') %>
 </head>
 <body>
-    <header>
+    <header class="home-header">
         <h1>⚾️ General Manager</h1>
         <div class="dropdown">
             <div class="dropBtn" onclick="myFunction(this); openDropdown()">
@@ -17,7 +17,7 @@
                 <a class="dropdown-links" href="/roster">Roster</a>
                 <a class="dropdown-links" href="/fa">Free Agents</a>
                 <a class="dropdown-links" href="/gm/new">Add Player</a>
-        </div>
+            </div>
         </div>
     </header>
     <main>
@@ -32,25 +32,24 @@
                         <a class="player-link" href="/gm/<%=players[i].id%>">
                             <img class="player-thumb" id="diamond-player-thumb-home" src="<%=players[i].img%>" alt="player profile picture">
                         </a>
+                <% } }%>
             </div>
-            <% } }%>
             <div id="second-base" class="base">
                 <%for (let i= 0; i < players.length; i++) {%>
                 <% if (players[i].position === '2B' && players[i].starter === true) { %>
                     <a class="player-link" href="/gm/<%=players[i].id%>">
-                        <img class="player-thumb" id="diamond-player-thumb-home" src="<%=players[i].img%>" alt="player profile picture">
+                        <img class="player-thumb" id="diamond-player-thumb-home-2B" src="<%=players[i].img%>" alt="player profile picture">
                     </a>
+                <% } }%>
             </div>
-            <% } }%>
             <div id="third-base" class="base">
                 <%for (let i= 0; i < players.length; i++) {%>
                     <% if (players[i].position === '3B' && players[i].starter === true) { %>
                         <a class="player-link" href="/gm/<%=players[i].id%>">
                             <img class="player-thumb" id="diamond-player-thumb-home" src="<%=players[i].img%>" alt="player profile picture">
                         </a>
+                <% } }%>
             </div>
-            <% } }%>
-
             <div id="home-plate">
                 <%for (let i= 0; i < players.length; i++) {%>
                     <% if (players[i].position === 'C' && players[i].starter === true) { %>
