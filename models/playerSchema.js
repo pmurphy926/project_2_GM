@@ -9,7 +9,7 @@ const playerSchema = new Schema({
     hands: {type: String},
     height: {type: String},
     weight: {type: Number},
-    contract: {type: Boolean},
+    contract: {type: Boolean, default: false},
     years: Number,
     salary: Number,
     tags: [String],

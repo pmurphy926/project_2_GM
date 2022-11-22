@@ -69,7 +69,14 @@ app.get('/gm/:id/edit', (req, res) => {
 
 //Update - Post
 app.put('/gm/:id', (req, res)=>{
+    if(req.body.contract === 'on') {
+        req.body.contract = true;
+    } else {
+        req.body.contract = false;
+    }
+    console.log(req.body)
     Player.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedPlayer)=>{
+        console.log(updatedPlayer)
         res.redirect('/roster');
     })
 })
@@ -77,9 +84,20 @@ app.put('/gm/:id', (req, res)=>{
 //Delete - Retire Player
 app.delete('/gm/:id', (req, res)=>{
     Player.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/roster');
-    });
-});
+        res.redirect('/roster')
+    })
+})
+
+//**********************DB FUNCTIONS********************/
+releasePlayer = (players) => {
+    for (let i = 0; i < players.length; i++) {
+        if (players[i].contract === true) {
+            players[i].contract = false
+        } else {
+            players[i].contract = true
+        }
+    }
+  }   
 
 //**********************LISTENERS********************/
 if(process.env.PORT){

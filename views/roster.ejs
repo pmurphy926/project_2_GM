@@ -6,10 +6,18 @@
 <body>
     <header>
         <h1>⚾️ Full Roster</h1>
-        <div class="nav-dropdown" onclick="myFunction(this)">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
+        <div class="dropdown">
+            <div class="dropBtn" onclick="myFunction(this); openDropdown()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div id="myDropdown" class="dropdown-content">
+                        <a class="dropdown-links" href="/">Home</a>
+                        <a class="dropdown-links" href="/roster">Roster</a>
+                        <a class="dropdown-links" href="/fa">Free Agents</a>
+                        <a class="dropdown-links" href="/gm/new">Add Player</a>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -50,10 +58,9 @@
                         </td>
                     </tr>
                     <% } } %>
-
                 </tbody>
             </table>
     </div>
     </main>
-</body>
+</body>›
 </html>
