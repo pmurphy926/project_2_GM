@@ -11,30 +11,101 @@
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
-                <div id="myDropdown" class="dropdown-content">
-                        <a class="dropdown-links" href="/">Home</a>
-                        <a class="dropdown-links" href="/roster">Roster</a>
-                        <a class="dropdown-links" href="/fa">Free Agents</a>
-                        <a class="dropdown-links" href="/gm/new">Add Player</a>
-                </div>
             </div>
+            <div id="myDropdown" class="dropdown-content">
+                <a class="dropdown-links" href="/">Home</a>
+                <a class="dropdown-links" href="/roster">Roster</a>
+                <a class="dropdown-links" href="/fa">Free Agents</a>
+                <a class="dropdown-links" href="/gm/new">Add Player</a>
+        </div>
         </div>
     </header>
     <main>
-        <div class="baseball-diamond">
-            <img class="baseball-diamond-image" src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/76536/baseball-diamond-clipart-xl.png" alt="baseball diamond diagram">
-        </div>
-        <div class="roster">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+        <div id="stadium">
+            <div id="field" class="mowed-grass"></div>
+            <div id="in-field"></div>
+            <div id="in-field-grass" class="mowed-grass"></div>
+            <div id="batting-circle"></div>
+            <div id="first-base" class="base">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === '1B' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+            <div id="second-base" class="base">
+                <%for (let i= 0; i < players.length; i++) {%>
+                <% if (players[i].position === '2B' && players[i].starter === true) { %>
+                    <a class="player-link" href="/gm/<%=players[i].id%>">
+                        <img class="player-thumb" id="diamond-player-thumb-home" src="<%=players[i].img%>" alt="player profile picture">
+                    </a>
+            </div>
+            <% } }%>
+            <div id="third-base" class="base">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === '3B' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+
+            <div id="home-plate">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'C' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home-C" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+            <div id="base-lines"></div>
+            <div id="pitchers-mound">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'CF' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home-CF" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+            <div id="pitchers-plate">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'SP' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home-SP" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+            <div id="first-circle" class="half-circle">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'RF' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home-RF" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+                
+            <div id="second-circle" class="half-circle">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'SS' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home-SS" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+            <div id="third-circle" class="half-circle">
+                <%for (let i= 0; i < players.length; i++) {%>
+                    <% if (players[i].position === 'LF' && players[i].starter === true) { %>
+                        <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <img class="player-thumb" id="diamond-player-thumb-home-LF" src="<%=players[i].img%>" alt="player profile picture">
+                        </a>
+            </div>
+            <% } }%>
+            <div id="batters-box-right" class="batters-box"></div>
+            <div id="batters-box-left" class="batters-box"></div>
+            <div id="first-base-thing"></div>
         </div>
     </main>
 </body>
 </html>
+

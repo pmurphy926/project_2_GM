@@ -3,6 +3,9 @@
 body {
     height: 100%;
     background-color: #383737;
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
 }
 
 a {
@@ -93,13 +96,11 @@ header h1 {
     transform: translate(2px, 0) rotate(45deg);
 }
 
-
-
-
 /* Home Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .baseball-diamond {
     text-align: center;
+    margin-top: 2%;
 }
 
 .baseball-diamond-image {
@@ -107,8 +108,18 @@ header h1 {
 }
 
 .roster {
+    background-color: transparent;
     display: grid;
-    z-index: 1;
+    position: fixed;
+    top: 70px;
+	bottom: 0;
+    height: 100%;
+	width: 100%;
+	z-index: 1;
+}
+
+.player-thumb-home {
+    width: 7%;
 }
 
 /* Dropdown
@@ -127,21 +138,20 @@ header h1 {
     min-width: 125px;
     z-index: 1;
     animation: growDown 300ms ease-in-out;
-    transform: translate(-75px, 0);
+    transform: translate(-75px, 50px);
     text-align: right;
     margin-top: 5px;
-    /* transform-origin: top center; */
 }
   
 @keyframes growDown {
     0% {
-        transform: scaleY(0)
+        transform: scaleY(0);
     }
     80% {
-        transform: scaleY(1.1)
+        transform: scaleY(1.1);
     }
     100% {
-        transform: scaleY(1)
+        transform: scaleY(1);
     }
 }
 
@@ -285,8 +295,6 @@ input {
 
 /* Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
 @media (max-width: 500px) {
     /* Show Page (adapted from partner lab from Week 5) */
     .info-flex-container {
@@ -308,4 +316,257 @@ input {
     .info-image {
         width: 90%;
     }
+}
+
+
+/* Home Page (with Codepen Diamond)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#field {
+    position:absolute;
+    top:-110px;
+    left:145px;
+    height:700px;
+    width:700px;
+    border-radius:1% 100% 1% 1%;
+    border:1px solid green;
+    background-color:green;
+    transform: rotate(-45deg);
+}
+
+#in-field { 
+    position:absolute;
+    top:170px;
+    left:265px;
+    height:450px;
+    width:450px;
+    border-radius:1% 50% 1% 1%;
+    border:1px solid #836539;
+    background-color:#836539;
+    transform: rotate(-45deg);
+}
+
+#base-lines {
+    position:absolute;
+    top: -120px;
+    left: 155px;
+    height:669px;
+    width:670px;
+    border-left:2px solid white;
+    border-bottom:2px solid white;
+    transform: rotate(-45deg);
+}
+
+#in-field-grass {
+    position:absolute;
+    top: 330px;
+    left: 359px;
+    height:260px;
+    width:260px;
+    border:2px solid green;
+    background-color:green;
+    transform: rotate(-45deg);
+}
+
+.base {
+    position:absolute;
+    height:13px;
+    width:13px;
+    transform: rotate(-45deg);
+    border:1px solid white;
+    background-color:white;
+    z-index: 1000;
+}
+#first-base{
+    top:450px;
+    left:706px;
+}
+#second-base{
+    top:231px;
+    left:484px;
+}
+#third-base{
+    top:450px;
+    left:262px;
+}
+#home-plate{
+    position:absolute;
+    height:7px;
+    width:13px;
+    top:678px;
+    left:485px;
+    border:1px solid white;
+    background-color:white;
+}
+#home-plate:before, #home-plate:after {
+	top: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+#home-plate:before {
+	border-top-color:white;
+	border-width: 8px;
+	left: 50%;
+	margin-left: -9.5px;
+}
+
+#pitchers-mound{ 
+    position:absolute;
+    top:420px;
+    left:450px;
+    height:80px;
+    width:80px;
+    border-radius:100% 100% 100% 100%;
+    transform: rotate(-45deg);
+     border:1px solid #836539;
+    background-color:#836539;
+}
+#pitchers-plate{ 
+    position:absolute;
+    top:458px;
+    left:482px;
+    height:5px;
+    width:16px;
+    border:1px solid white;
+    background-color:white;
+}
+#vertical{
+    position:absolute;
+    top:14px;
+    left:491px;
+    height:1115px;
+    width:1px;
+    border-left:1px solid black;
+}
+
+.half-circle{    
+    position:absolute;
+    height:40px;
+    width: 40px;
+    transform: rotate(-45deg);
+    border:1px solid #836539;
+    background-color:#836539;
+}
+
+#third-circle{
+    top:440px;
+    left:300px;
+    border-radius:1% 1% 100% 1%;
+}
+
+#first-circle{
+    top:440px;
+    left:642px;
+    border-radius:100% 1% 1% 1%;
+}
+
+#second-circle{
+    top:275px;
+    left:470px;
+    border-radius:1% 1% 1% 100%;
+}
+.batters-box{
+    position:absolute;
+    height:25px;
+    width: 15px;
+    border:2px solid white;
+    background-color:#836539;
+    top: 670px;
+}
+#batters-box-right{
+    box-shadow: 6px 0 #836539; /* Cover up the base line */
+    left:461px;
+}
+#batters-box-left{
+  box-shadow: -6px 0 #836539; /* Cover up the base line */
+    left:503px;
+}
+
+#batting-circle{ 
+    position:absolute;
+    top:634px;
+    left:440px;
+    height:100px;
+    width:100px;
+    border-radius:100% 100% 100% 100%;
+   transform: rotate(-45deg);
+     border:1px solid #836539;
+    background-color:#836539;
+}
+
+#first-base-thing{
+    top:430px;
+    left:667px;
+    position:absolute;
+    height:170px;
+    width:13px;
+    transform: rotate(45deg);
+    border-right:2px solid white;
+    border-bottom:2px solid white;
+}
+
+.mowed-grass{
+    background-color: #ac0;
+    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -ms-linear-gradient(0deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(0deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(0deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
+    -webkit-background-size: 250px 250px;
+    -moz-background-size: 50px 50px;
+    background-size: 200px 200px;
+    background-color:#ac0
+}
+
+#diamond-player-thumb-home {
+    width: 500%;
+    z-index: 1;
+    transform: rotate(45deg);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-C {
+    width: 450%;
+    z-index: 2;
+    transform: translateY(30px);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-SP {
+    width: 450%;
+    z-index: 2;
+    transform: translateY(10px);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-SS {
+    width: 175%;
+    z-index: 2;
+    transform: translateY(-35px) rotate(45deg) translateX(-150px);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-LF {
+    width: 150%;
+    z-index: 2;
+    transform: translateY(-350px) rotate(45deg) translateX(50px);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-CF {
+    width: 80%;
+    z-index: 2;
+    transform: rotate(45deg) translateY(-400px) translateX(30px);
+    border-radius: 35px;
+}
+
+#diamond-player-thumb-home-RF {
+    width: 150%;
+    z-index: 2;
+    transform: rotate(45deg) translateY(-275px) translateX(125px);
+    border-radius: 35px;
 }
