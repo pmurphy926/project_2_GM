@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <h1>⚾️ Add Player</h1>
+        <h1>⚾️ Add Free Agent</h1>
         <form action="/results/" method="POST">
             <input class="search" type="text" name="position" placeholder="Search by position">
         </form>
@@ -26,7 +26,7 @@
     </header>
     <main>
         <div class="form-center">
-            <form action="/roster" method="POST">
+            <form action="/fa" method="POST">
                 <input type="text" name="name" placeholder="First and Last Name">
                 <input type="number" name="number" placeholder="0-99">
                 <input type="text" name="img" placeholder="Image URL">
@@ -34,12 +34,9 @@
                 <input type="text" name="hands" placeholder="Bat Hand/Throw Hand">
                 <input type="text" name="height" placeholder="Feet/Inches">
                 <input type="text" name="weight" placeholder="Omit lbs.">
-                <div class="checkbox">Contract: <input type="checkbox" name="contract"></div>
-                <input type="text" name="years" placeholder="Contract Years Remaining">
-                <input type="text" name="salary" placeholder="Salary (Omit $)">
                 <input type="text" name="tags" placeholder="Traits: power, speed, etc.">
-                <div class="checkbox">Stater: <input type="checkbox" name="starter"></div>
-                <input class="submitBtn" type="submit" value="Add New Player">
+                
+                <input class="submitBtn" type="submit" value="Add New Free Agent">
             </form>
         </div>
     </main>

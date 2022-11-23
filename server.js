@@ -20,15 +20,38 @@ app.get('/seed', (req, res) => {
 })
 
 //************************ROUTES**********************/
-//Create - New
+//Create - New Signed Player
 app.get('/gm/new', (req, res) => {
+
     res.render('new.ejs')
 })
 
-//Create - Post
+//Create - New Free Agent
+app.get('/gm/newfa', (req, res) => {
+    res.render('new-free-agent.ejs')
+})
+
+//Create - Post (Roster)
 app.post('/roster', (req, res) => {
+    if(req.body.contract === 'on') {
+        req.body.contract = true;
+    } else {
+        req.body.contract = false;
+    }
+    if(req.body.starter === 'on') {
+        req.body.starter = true;
+    } else {
+        req.body.starter = false;
+    }
     Player.create(req.body, (err, data) => {
             res.redirect('/roster');
+    })
+})
+
+//Create - Post (Free Agent)
+app.post('/fa', (req, res) => {
+    Player.create(req.body, (err, data) => {
+            res.redirect('/fa');
     })
 })
 
@@ -53,6 +76,13 @@ app.get('/fa', (req, res) => {
     })
 })
 
+// Read Route - Bench Index
+app.get('/bench', (req, res) => {
+    Player.find({}, (err, player) => {
+        res.render('bench.ejs', {players:player})
+    })
+})
+
 //Read Route - Show
 app.get('/gm/:id', (req, res) => {
     Player.findById(req.params.id, (err, foundPlayer) => {
@@ -62,6 +92,16 @@ app.get('/gm/:id', (req, res) => {
 
 //Update - Edit
 app.get('/gm/:id/edit', (req, res) => {
+    if(req.body.contract === 'on') {
+        req.body.contract = true;
+    } else {
+        req.body.contract = false;
+    }
+    if(req.body.starter === 'on') {
+        req.body.starter = true;
+    } else {
+        req.body.starter = false;
+    }
     Player.findById(req.params.id, (err, foundPlayer)=>{ 
         res.render('edit.ejs', {players: foundPlayer})
     })
@@ -94,7 +134,7 @@ app.delete('/gm/:id', (req, res) => {
 })
 
 //Search bar
-app.post('/results/?', (req, res) => {
+app.post('/results/', (req, res) => {
     Player.find(req.body, (err, foundPlayer) => {
         res.render('results.ejs', {players: foundPlayer})
     })

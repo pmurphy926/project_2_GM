@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const playerSchema = new Schema({
     name: {type: String},
-    number: {type: String},
+    number: {type: String, },
     img: {type: String},
     position: {type: String},
     hands: {type: String},
@@ -13,7 +13,7 @@ const playerSchema = new Schema({
     years: Number,
     salary: Number,
     tags: [String],
-    starter: {type: Boolean},
+    starter: {type: Boolean, default: false},
 })
 
 const Player = mongoose.model('Player', playerSchema);

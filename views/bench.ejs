@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <h1>⚾️ Search Results</h1>
+        <h1>⚾️ Bench</h1>
         <form action="/results/" method="POST">
             <input class="search" type="text" name="position" placeholder="Search by position">
         </form>
@@ -36,10 +36,10 @@
                         <th>B/T</th>
                         <th>Height</th>
                         <th>Weight</th>
-                        <th>Signed</th>
                     </tr>
                     <%for (let i= 0; i < players.length; i++) {%>
                     <tr>
+                        <% if (players[i].contract === true && players[i].starter === false) {%>
                         <td class="player-thumb">
                             <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
                         </td>
@@ -60,11 +60,8 @@
                         <td>
                             <%=players[i].weight%> lbs.
                         </td>
-                        <td>
-                            <%=players[i].contract%>
-                        </td>
                     </tr>
-                    <% } %>
+                    <% } } %>
                 </tbody>
             </table>
     </div>
