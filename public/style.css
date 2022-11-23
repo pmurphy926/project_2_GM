@@ -80,12 +80,12 @@ header h1 {
     background-color: #60c3cc;
     margin: 6px 0;
     transition: 0.4s;
-  }
+}
 
 .change .bar1 {
     width: 20px;
     transform: translate(13px, 22px) rotate(-45deg);
-  }
+}
   
 .change .bar2 {
     transform: rotate(90deg);
@@ -360,5 +360,75 @@ input {
 
     .info-image {
         width: 90%;
+    }
+
+    /* Home Page */
+    .baseball-diamond {
+        text-align: center;
+        margin-top: 2%;
+        position: fixed;
+    }
+
+    .baseball-diamond-image {
+        width: 50%;
+    }
+
+    .roster {
+        background-color: transparent;
+        position: fixed;
+        top: 70px;
+        bottom: 0;
+        width: 80%;
+        z-index: 1;
+    }
+
+    .player-thumb-home {
+        width: 5%;
+        border-radius: 35px;
+    }
+
+    #player-thumb-1B {
+        position: fixed;
+        transform: translateX(1200%) translateY(490%);
+    }
+
+    #player-thumb-2B {
+        position: fixed;
+        transform: translateX(1150%) translateY(280%);
+    }
+
+    #player-thumb-SS {
+        position: fixed;
+        transform: translateX(730%) translateY(280%);
+    }
+
+    #player-thumb-3B {
+        position: fixed;
+        transform: translateX(700%) translateY(490%);
+    }
+
+    #player-thumb-C {
+        position: fixed;
+        transform: translateX(945%) translateY(850%);
+    }
+
+    #player-thumb-SP {
+        position: fixed;
+        transform: translateX(950%) translateY(490%);
+    }
+
+    #player-thumb-LF {
+        position: fixed;
+        transform: translateX(630%) translateY(150%);
+    }
+
+    #player-thumb-CF {
+        position: fixed;
+        transform: translateX(950%) translateY(50%);
+    }
+
+    #player-thumb-RF {
+        position: fixed;
+        transform: translateX(1300%) translateY(200%);
     }
 }

@@ -74,6 +74,11 @@ app.put('/gm/:id', (req, res)=>{
     } else {
         req.body.contract = false;
     }
+    if(req.body.starter === 'on') {
+        req.body.starter = true;
+    } else {
+        req.body.starter = false;
+    }
     console.log(req.body)
     Player.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedPlayer)=>{
         console.log(updatedPlayer)
