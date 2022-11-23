@@ -11,7 +11,7 @@ const playerSchema = new Schema({
     weight: {type: Number},
     contract: {type: Boolean, default: false},
     years: Number,
-    salary: Number,
+    salary: String,
     tags: [String],
     starter: {type: Boolean, default: false},
 })

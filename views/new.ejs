@@ -6,23 +6,23 @@
 <body>
     <header>
         <h1>⚾️ Add Player</h1>
-        <form action="/results/" method="POST">
-            <input class="search" type="text" name="position" placeholder="Search by position">
-        </form>
-        <div class="dropdown">
-            <div class="dropBtn" onclick="myFunction(this); openDropdown()">
-                <div class="bar1"></div>
-                <div class="bar2"></div>
-                <div class="bar3"></div>
+            <form action="/results/" method="POST">
+                <input class="search" type="text" name="position" placeholder="Search by position">
+            </form>
+            <div class="dropdown">
+                <div class="dropBtn" onclick="myFunction(this); openDropdown()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <div id="myDropdown" class="dropdown-content">
+                    <a class="dropdown-links" href="/">Home</a>
+                    <a class="dropdown-links" href="/roster">Roster</a>
+                    <a class="dropdown-links" href="/fa">Free Agents</a>
+                    <a class="dropdown-links" href="/bench">Bench</a>
+                    <a class="dropdown-links" href="/gm/new">Add Player</a>
+                </div>
             </div>
-            <div id="myDropdown" class="dropdown-content">
-                <a class="dropdown-links" href="/">Home</a>
-                <a class="dropdown-links" href="/roster">Roster</a>
-                <a class="dropdown-links" href="/fa">Free Agents</a>
-                <a class="dropdown-links" href="/bench">Bench</a>
-                <a class="dropdown-links" href="/gm/new">Add Player</a>
-            </div>
-        </div>
     </header>
     <main>
         <div class="form-center">
@@ -34,12 +34,12 @@
                 <input type="text" name="hands" placeholder="Bat Hand/Throw Hand">
                 <input type="text" name="height" placeholder="Feet/Inches">
                 <input type="text" name="weight" placeholder="Omit lbs.">
-                <div class="checkbox">Contract: <input type="checkbox" name="contract"></div>
+                <div class="checkbox">Contract: <input class="input-check" type="checkbox" name="contract"></div>
                 <input type="text" name="years" placeholder="Contract Years Remaining">
                 <input type="text" name="salary" placeholder="Salary (Omit $)">
                 <input type="text" name="tags" placeholder="Traits: power, speed, etc.">
-                <div class="checkbox">Stater: <input type="checkbox" name="starter"></div>
-                <input class="submitBtn" type="submit" value="Add New Player">
+                <div class="checkbox">Starter: <input class="input-check" type="checkbox" name="starter"></div><br>
+                <input class="add-new-form-btn" type="submit" value="Add New Player">
             </form>
         </div>
     </main>
