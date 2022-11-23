@@ -68,7 +68,7 @@ app.get('/gm/:id/edit', (req, res) => {
 })
 
 //Update - Post
-app.put('/gm/:id', (req, res)=>{
+app.put('/gm/:id', (req, res) => {
     if(req.body.contract === 'on') {
         req.body.contract = true;
     } else {
@@ -87,22 +87,18 @@ app.put('/gm/:id', (req, res)=>{
 })
 
 //Delete - Retire Player
-app.delete('/gm/:id', (req, res)=>{
+app.delete('/gm/:id', (req, res) => {
     Player.findByIdAndRemove(req.params.id, (err, data)=>{
         res.redirect('/roster')
     })
 })
 
-//**********************DB FUNCTIONS********************/
-releasePlayer = (players) => {
-    for (let i = 0; i < players.length; i++) {
-        if (players[i].contract === true) {
-            players[i].contract = false
-        } else {
-            players[i].contract = true
-        }
-    }
-  }   
+//Search bar
+app.post('/results/?', (req, res) => {
+    Player.find(req.body, (err, foundPlayer) => {
+        res.render('results.ejs', {players: foundPlayer})
+    })
+})
 
 //**********************LISTENERS********************/
 if(process.env.PORT){

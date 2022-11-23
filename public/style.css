@@ -73,6 +73,18 @@ header h1 {
     margin-bottom: 5px;
 }
 
+.search {
+    flex-basis: 15%;
+    background-color: #383737;
+    border: 1px solid #60c3cc;
+    border-radius: 15px;
+    color:#60c3cc;
+}
+
+::placeholder {
+    color:#60c3cc;
+}
+
 /* Hamburger (styling and js adapted from W3schools)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .bar1, .bar2, .bar3 {
@@ -170,7 +182,7 @@ header h1 {
 
 /* Carousel
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-.carousel {
+/* .carousel {
 	width: 45%;
 	justify-content: space-around;
     align-items: flex-end;
@@ -196,7 +208,7 @@ header h1 {
 
 .carousel-images img:first-of-type {
 	display: block;
-}
+} */
 
 /* Dropdown
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -215,6 +227,8 @@ header h1 {
     min-width: 125px;
     z-index: 2;
     /* animation: growDown 300ms ease-in-out; */
+    /* animation: growDown 300ms ease-in-out forwards; */
+    /* transform-origin: top left; */
     transform: translateX(-75px);
     text-align: right;
     margin-top: 40px;
@@ -372,7 +386,7 @@ input {
 
 /* Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media (max-width: 500px) {
+@media (max-width: 850px) {
     /* Show Page (adapted from partner lab from Week 5) */
     .info-flex-container {
         display: flex;
@@ -402,7 +416,7 @@ input {
     }
 
     .baseball-diamond-image {
-        width: 50%;
+        width: 100%;
     }
 
     .roster {
@@ -415,52 +429,75 @@ input {
     }
 
     .player-thumb-home {
-        width: 5%;
+        width: 10%;
         border-radius: 35px;
     }
 
     #player-thumb-1B {
         position: fixed;
-        transform: translateX(1200%) translateY(490%);
+        transform: translateX(700%) translateY(450%);
     }
 
     #player-thumb-2B {
         position: fixed;
-        transform: translateX(1150%) translateY(280%);
+        transform: translateX(600%) translateY(200%);
     }
 
     #player-thumb-SS {
         position: fixed;
-        transform: translateX(730%) translateY(280%);
+        transform: translateX(300%) translateY(200%);
     }
 
     #player-thumb-3B {
         position: fixed;
-        transform: translateX(700%) translateY(490%);
+        transform: translateX(180%) translateY(450%);
     }
 
     #player-thumb-C {
         position: fixed;
-        transform: translateX(945%) translateY(850%);
+        transform: translateX(440%) translateY(800%);
     }
 
     #player-thumb-SP {
         position: fixed;
-        transform: translateX(950%) translateY(490%);
+        transform: translateX(440%) translateY(470%);
     }
 
     #player-thumb-LF {
         position: fixed;
-        transform: translateX(630%) translateY(150%);
+        transform: translateX(150%) translateY(100%);
     }
 
     #player-thumb-CF {
         position: fixed;
-        transform: translateX(950%) translateY(50%);
+        transform: translateX(440%) translateY(20%);
+        
     }
 
     #player-thumb-RF {
         position: fixed;
-        transform: translateX(1300%) translateY(200%);
+        transform: translateX(770%) translateY(150%);
+        
+    }
+
+    /* Header */
+    header h1 {
+        font-size: 24px;
+    }
+
+    .bar1, .bar2, .bar3 {
+        width: 25px;
+        height: 2px;
+        background-color: #60c3cc;
+        margin: 6px 0;
+    }
+    
+    .search {
+        flex-basis: 35%;
+        margin-top: 0;
+        background-color: #383737;
+        border: 1px solid #60c3cc;
+        border-radius: 15px;
+        color:#60c3cc;
     }
 }
