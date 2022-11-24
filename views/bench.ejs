@@ -64,7 +64,35 @@
                     <% } } %>
                 </tbody>
             </table>
-    </div>
+        </div>
+
+        <div class="players-mobile">
+            <a href="/gm/new"><button class="new-btn">Add New Player</button></a>
+            <table class="player-index-table">
+                <tbody>
+                    <tr class="table-head">
+                        <th>Players</th>
+                        <th></th>
+                        <th>Pos.</th>
+                    </tr>
+                    <%for (let i= 0; i < players.length; i++) {%>
+                    <tr>
+                        <% if (players[i].contract === true && players[i].starter === false) {%>
+                        <td class="player-thumb">
+                            <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
+                        </td>
+                        <td class="player-name">
+                            <a class="player-link" href="/gm/<%=players[i].id%>">
+                            <%=players[i].name%></a><span class="jersey">(<%=players[i].number%>)</span>
+
+                        </td>
+                        <td>
+                            <%=players[i].position%>
+                    </tr>
+                    <% } } %>
+                </tbody>
+            </table>
+        </div>
     </main>
 </body>
 </html>
