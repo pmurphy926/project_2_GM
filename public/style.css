@@ -12,6 +12,10 @@ a {
     text-decoration: none;
 }
 
+h1 a {
+    font-family: 'Red Hat Text', sans-serif;
+}
+
 h1, h2, h3 {
     font-family: 'Red Hat Text', sans-serif;
     color: #60c3cc;
@@ -233,6 +237,7 @@ header h1 {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .dropdown {
     display: flex;
+    position: relative;
     cursor: pointer;
     z-index: 2;
     margin-left: 20px;
