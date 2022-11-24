@@ -404,7 +404,7 @@ input {
 
 /* Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media (max-width: 860px) {
+@media only screen and (max-width: 860px) and (min-width: 360px) {
     /* Show Page (adapted from partner lab from Week 5) */
     .info-flex-container {
         display: flex;
@@ -512,14 +512,14 @@ input {
     }
 
     header h1 {
-        font-size: 20px;
+        flex-basis: 25%;
         margin-top: 0;
         margin-bottom: 5px;
         align-items: flex-end;
     }
     
     .search {
-        flex-basis: 15%;
+        flex-basis: 10%;
         background-color: #383737;
         border: 1px solid #60c3cc;
         border-radius: 15px;
