@@ -36,7 +36,7 @@
                 <input type="number" name="weight" value="<%=players.weight%>">
                 <div class="checkbox">
                     Contract:
-                    <input type="checkbox" name="contract"
+                    <input class="input-check" type="checkbox" name="contract"
                     <% if (players.contract) {%>
                         checked
                         <%}%>>
@@ -46,12 +46,12 @@
                 <input type="text" name="tags" value="<%=players.tags%>">
                 <div class="checkbox">
                     Starter:
-                    <input type="checkbox" name="starter"
+                    <input class="input-check" type="checkbox" name="starter"
                     <% if (players.starter) {%>
                         checked
                         <% } %>>
-                    </div>
-                <button>Update Player</button>
+                    </div><br>
+                    <input class="add-new-form-btn" type="submit" value="Update Player">
             </form>
         </div>
     </main>

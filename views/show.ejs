@@ -42,7 +42,7 @@
                 <p><span class="player-info-show">Weight: </span><%=players.weight%> lbs</p>
                 <p><span class="player-info-show">Contract Years Remaining: </span><%=players.years%></p>
                 <p><span class="player-info-show">Season Salary: </span>$<%=players.salary%></p>
-                <p><span class="player-info-show">Traits: </span><%=players.tags%></p>
+                <p><span class="player-info-show">Traits: </span><%=players.tags.join(', ')%></p>
                 <a href="/gm/<%=players.id%>/edit">
                     <input class="submitBtn" type="submit" value="Edit">
                 </a>
@@ -63,16 +63,5 @@
             </div>
         </div>
     </main>
-    <script>
-    function releasePlayer (players) {
-        for (let i = 0; i < players.length; i++) {
-            if (players[i].contract === true) {
-                players[i].contract = false
-            } else {
-                players[i].contract = true
-            }
-        }
-    }      
-    </script>
 </body>
 </html>

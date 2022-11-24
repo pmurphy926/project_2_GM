@@ -123,7 +123,7 @@ module.exports = [
     weight: 205,
     contract: true,
     years: 5,
-    salary: '10.000,000',
+    salary: '10,000,000',
     tags: ['opposite field approach', 'cannon', 'range'],
     starter: true,
     },
