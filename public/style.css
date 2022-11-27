@@ -249,12 +249,9 @@ header h1 {
     float: right;
     position: absolute;
     color: #60c3cc;
-    background-color: transparent;
+    background-color: #383737;
     min-width: 125px;
     z-index: 2;
-    /* animation: growDown 300ms ease-in-out; */
-    /* animation: growDown 300ms ease-in-out forwards; */
-    /* transform-origin: top left; */
     transform: translateX(-75px);
     text-align: right;
     margin-top: 40px;
@@ -377,7 +374,7 @@ input {
 }
 
 .info-image-container {
-    align-self: flex-end;
+    align-self: flex-start;
     flex-basis: 50%;
     text-align: right;
     margin-right: 15px;
@@ -514,6 +511,7 @@ input {
         height: 2px;
         background-color: #60c3cc;
         margin: 6px 0;
+        font-size: .8em;
     }
 
     header {
@@ -522,10 +520,11 @@ input {
     }
 
     header h1 {
-        flex-basis: 25%;
+        flex-basis: 35%;
         margin-top: 0;
         margin-bottom: 5px;
         align-items: flex-end;
+        font-size: 1em;
     }
     
     .search {
@@ -538,6 +537,7 @@ input {
 
     .dropdown {
         display: flex;
+        position: relative;
         cursor: pointer;
         z-index: 2;
         margin-top: 6px;
@@ -545,6 +545,7 @@ input {
     }
 
     .change .bar1 {
+        width: 25px;
         transform: none;
     }
       
@@ -553,21 +554,28 @@ input {
     }
       
     .change .bar3 {
+        width: 25px;
         transform: none;
     }
 
     .dropdown-content {
         width: 100%;
         height: 100%;
-        display: none;
         float: right;
-        position: absolute;
+        position: static;
         color: #60c3cc;
         background-color: #383737;
         min-width: 125px;
         z-index: 2;
         text-align: center;
         margin-top: 40px;
+        opacity: 1.0;
+    }
+
+    .show {
+        width: 100%;
+        display: block;
+        background-color: #383737;
     }
 
     .players {

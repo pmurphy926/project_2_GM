@@ -4,8 +4,12 @@
 function myFunction(x) {
     x.classList.toggle("change");
   }
-
-//Reverse
+//turns off animation for mobile
+if (window.matchMedia('(max-width: 860px)').matches) {
+  function myFunction() {
+      return false;
+  }
+} else {}
 
 //Dropdown display (source: W3)
 //––––––––––––––––––––––––––––––––––––––––––––––––––

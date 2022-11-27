@@ -43,23 +43,27 @@
                 <p><span class="player-info-show">Contract Years Remaining: </span><%=players.years%></p>
                 <p><span class="player-info-show">Season Salary: </span>$<%=players.salary%></p>
                 <p><span class="player-info-show">Traits: </span><%=players.tags.join(', ')%></p>
+
                 <a href="/gm/<%=players.id%>/edit">
                     <input class="submitBtn" type="submit" value="Edit">
                 </a>
                 <!-- This button removes a player from the roster - they will then show up as a Free Agent -->
-                <%if (players.contract === true) {%>
-                    <form action="/gm/<%=players.id%>?_method=PUT" method="POST">
-                        <input class="release-player-info" type="number" name="years" value="0">
-                        <input class="release-player-info" type="text" name="salary" value="0">
-                        <input class="release-player-info" type="checkbox" name="contract"
-                            <% if (players.contract)%>>
-                        <input class="submitBtn" type="submit" value="Release">
-                    </form>
-                <% } %>
-                <form action="/gm/<%=players.id%>?_method=DELETE" method="POST">
-                    <input class="submitBtn" type="submit" value="Retire">
-                </form>
-                <a href="/roster"><input class="submitBtn" type="submit" value="Return to Roster"></a>
+                    <div class="show-page-buttons">
+                        <%if (players.contract === true) {%>
+                            <form action="/gm/<%=players.id%>?_method=PUT" method="POST">
+                                <input class="release-player-info" type="number" name="years" value="0">
+                                <input class="release-player-info" type="text" name="salary" value="0">
+                                <input class="release-player-info" type="checkbox" name="contract"
+                                    <% if (players.contract)%>>
+                                <input class="submitBtn" type="submit" value="Release">
+                            </form>
+                        <% } %>
+                        <!-- This button removes a player from the database -->
+                        <form action="/gm/<%=players.id%>?_method=DELETE" method="POST">
+                            <input class="submitBtn" type="submit" value="Retire">
+                        </form>
+                        <a href="/roster"><input class="submitBtn" type="submit" value="Return to Roster"></a>
+                    </div>
             </div>
         </div>
     </main>
