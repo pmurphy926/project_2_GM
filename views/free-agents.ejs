@@ -5,7 +5,7 @@
 </head>
 <body>
     <header>
-        <h1>⚾️ <a href="/fa">Free Agents</h1></a>
+        <h1>⚾️ <a href="/roster">Starting Roster</a></h1>
         <form action="/results/" method="POST">
             <input class="search" type="text" name="position" placeholder="Search by position">
         </form>
@@ -18,12 +18,11 @@
             <div id="myDropdown" class="dropdown-content">
                 <a class="dropdown-links" href="/">Home</a>
                 <a class="dropdown-links" href="/roster">Roster</a>
-                <a class="dropdown-links" href="/fa">Free Agents</a>
                 <a class="dropdown-links" href="/bench">Bench</a>
                 <a class="dropdown-links" href="/gm/new">Add Player</a>
                 <% if (currentUser) { %>
                     <form action="/sessions?_method=DELETE" method="POST">
-                        <input type="submit" value="Log Out" class="btn-small red" />
+                        <input class="log-out" type="submit" value="Log Out"/>
                       </form>
                 <% } else { %>
                     <a class="dropdown-links" href="/users/new">Sign Up</a>
@@ -34,7 +33,7 @@
     </header>
     <main>
         <div class="players">
-            <a href="/gm/newfa"><button class="new-btn">Add New Free Agent</button></a>
+            <a href="/gm/new"><button class="new-btn">Add New Player</button></a>
             <table class="player-index-table">
                 <tbody>
                     <tr class="table-head">
@@ -54,7 +53,7 @@
                         <td class="player-name">
                             <a class="player-link" href="/gm/<%=players[i].id%>">
                             <%=players[i].name%></a><span class="jersey">(<%=players[i].number%>)</span>
-                            
+
                         </td>
                         <td>
                             <%=players[i].position%>
@@ -70,13 +69,13 @@
                         </td>
                     </tr>
                     <% } } %>
-
                 </tbody>
             </table>
+            <a href="/bench"><button class="new-btn">View Bench</button></a>
         </div>
 
         <div class="players-mobile">
-            <a href="/gm/newfa"><button class="new-btn">Add New Free Agent</button></a>
+            <a href="/gm/new"><button class="new-btn">Add New Player</button></a>
             <table class="player-index-table">
                 <tbody>
                     <tr class="table-head">
@@ -93,16 +92,16 @@
                         <td class="player-name">
                             <a class="player-link" href="/gm/<%=players[i].id%>">
                             <%=players[i].name%></a><span class="jersey">(<%=players[i].number%>)</span>
-                            
+
                         </td>
                         <td>
                             <%=players[i].position%>
                         </td>
                     </tr>
                     <% } } %>
-
                 </tbody>
             </table>
+            <a href="/bench"><button class="new-btn">View Bench</button></a>
         </div>
     </main>
 </body>

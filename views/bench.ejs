@@ -23,7 +23,7 @@
                 <a class="dropdown-links" href="/gm/new">Add Player</a>
                 <% if (currentUser) { %>
                     <form action="/sessions?_method=DELETE" method="POST">
-                        <input type="submit" value="Log Out" class="btn-small red" />
+                        <input type="submit" value="Log Out"/>
                       </form>
                 <% } else { %>
                     <a class="dropdown-links" href="/users/new">Sign Up</a>

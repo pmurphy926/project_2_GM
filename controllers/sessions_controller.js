@@ -8,7 +8,7 @@ sessions.get('/new', (req, res) => {
 })
 
 // on sessions form submit (log in)
-sessions.post('/', (req, res) => {
+sessions.post('/new', (req, res) => {
   // username is found and password matches
   // successful log in
 

@@ -17,12 +17,6 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}));
 app.use(methodOverride('_method'))
 
-const sessionsController = require('./controllers/sessions_controller.js')
-app.use('/sessions', sessionsController)
-
-const userController = require('./controllers/users_controller.js')
-app.use('/users', userController)
-
 //***********************DATABASE**********************/
 // Seed Route
 app.get('/seed', (req, res) => {
@@ -39,6 +33,12 @@ app.use(
       saveUninitialized: false // default  more info: https://www.npmjs.com/package/express-session#resave
     })
 )
+
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
+
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
 
 app.get('/any', (req, res) => {
 //any route will work
