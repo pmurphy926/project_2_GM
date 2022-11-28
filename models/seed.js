@@ -381,7 +381,7 @@ module.exports = [
     },
     {
     name: 'Yans Loovensan',
-    number: '50',
+    number: '5',
     img: 'https://i.imgur.com/G7D2s3z.png',
     position: 'C',
     hands: 'L/R',
