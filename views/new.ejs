@@ -21,6 +21,14 @@
                     <a class="dropdown-links" href="/fa">Free Agents</a>
                     <a class="dropdown-links" href="/bench">Bench</a>
                     <a class="dropdown-links" href="/gm/new">Add Player</a>
+                    <% if (currentUser) { %>
+                        <form action="/sessions?_method=DELETE" method="POST">
+                            <input type="submit" value="Log Out" class="btn-small red" />
+                          </form>
+                    <% } else { %>
+                        <a class="dropdown-links" href="/users/new">Sign Up</a>
+                        <a class="dropdown-links" href="/sessions/new">Log In</a>
+                    <% } %>
                 </div>
             </div>
     </header>

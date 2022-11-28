@@ -393,4 +393,18 @@ module.exports = [
     tags: ['poor speed', 'low average hitter', 'low power', 'elite framer'],
     starter: false,
     },
+    {
+    name: 'Lood Janglosti',
+    number: '20',
+    img: 'https://i.imgur.com/Yo1dP45.png',
+    position: 'SS',
+    hands: 'L/L',
+    height: `6'1"`,
+    weight: 200,
+    contract: false,
+    years: 0,
+    salary: '0',
+    tags: ['base stealer', 'defensive replacement', 'low power', 'wild arm'],
+    starter: false,
+    },
 ]
