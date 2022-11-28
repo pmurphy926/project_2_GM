@@ -22,7 +22,6 @@ app.get('/seed', (req, res) => {
 //************************ROUTES**********************/
 //Create - New Signed Player
 app.get('/gm/new', (req, res) => {
-
     res.render('new.ejs')
 })
 

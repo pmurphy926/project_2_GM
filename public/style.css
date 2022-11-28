@@ -516,19 +516,16 @@ input {
 
     header {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     header h1 {
-        flex-basis: 35%;
-        margin-top: 0;
-        margin-bottom: 5px;
+        margin-top: 5%;
         align-items: flex-end;
         font-size: 1em;
     }
     
     .search {
-        flex-basis: 10%;
         background-color: #383737;
         border: 1px solid #60c3cc;
         border-radius: 15px;
@@ -565,7 +562,7 @@ input {
         z-index: 2;
         text-align: center;
         margin-top: 45px;
-        }
+    }
 
     .show {
         width: 100%;
@@ -592,5 +589,9 @@ input {
     
     .form-center {
         width: 75%;
+    }
+
+    .dropdown-links {
+        font-size: 1.5em;
     }
 }
