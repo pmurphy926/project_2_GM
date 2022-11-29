@@ -52,6 +52,11 @@
                 <p><span class="player-info-show">Bats/Throws: </span><%=players.hands%></p>
                 <p><span class="player-info-show">Height: </span><%=players.height%></p>
                 <p><span class="player-info-show">Weight: </span><%=players.weight%> lbs</p>
+                <p><span class="player-info-show">Age: </span><%=players.age%></p>
+                <p><span class="player-info-show"><%if (players.position === "SP" || players.position === "CP" || players.position === "RP") {%>ERA: </span><%=players.slash%>
+                    <% } else {%>
+                    Slash Line: </span><%=players.slash%></p>
+                    <%}%>
                 <p><span class="player-info-show">Contract Years Remaining: </span><%=players.years%></p>
                 <p><span class="player-info-show">Season Salary: </span>$<%=players.salary%></p>
                 <p><span class="player-info-show">Traits: </span><%=players.tags.join(', ')%></p>

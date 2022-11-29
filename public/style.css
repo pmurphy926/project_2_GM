@@ -234,33 +234,6 @@ header h1 {
     transform: translateX(1300%) translateY(200%);
 }
 
-/* Carousel
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* .carousel {
-	width: 45%;
-	justify-content: space-around;
-    align-items: flex-end;
-    margin-top: 50%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
-.highlights {
-	width: 100%;
-	border-radius: 25px;
-	display: none;
-    border: 5px solid slategrey;
-}
-.carousel-button {
-	padding: 10px;
-    width: 2%;
-}
-.carousel-button:hover {
-	cursor: pointer;
-}
-.carousel-images img:first-of-type {
-	display: block;
-} */
-
 /* Dropdown
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .dropdown {
@@ -395,21 +368,21 @@ input {
 /* Show (adapted from partner lab from Week 5)
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .info-image {
-    width: 70%;
+    align-items: stretch;
+    width: 75%;
     border-radius: 10px;
 }
 
 .info-flex-container {
     display: flex;
     justify-content: space-between;
-    
 }
 
 .info-image-container {
-    align-self: flex-start;
     flex-basis: 50%;
     text-align: right;
     margin-right: 15px;
+    align-items: stretch;
 }
 
 .info-container {
