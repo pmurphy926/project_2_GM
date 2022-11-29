@@ -592,8 +592,8 @@ input {
         color: #60c3cc;
         background-color: #383737;
         z-index: 2;
-        text-align: center;
         margin-top: 45px;
+        transform: translateX(-90px);
     }
 
     .show {
@@ -623,7 +623,8 @@ input {
         width: 75%;
     }
 
-    .dropdown-links {
-        font-size: 1.5em;
+    .dropdown-links, .log-out {
+        font-size: 1.3em;
     }
+
 }
