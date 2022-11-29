@@ -1,4 +1,4 @@
-//Names: https://www.youtube.com/watch?v=oymWAeqv_-c
+//Names: https://www.youtube.com/watch?v=oymWAeqv_-c and https://www.youtube.com/watch?v=N2YZuILGxKE
 
 module.exports = [
     {
@@ -498,7 +498,7 @@ module.exports = [
     starter: false,
     },
     {
-    name: 'Erl Jivlitz',
+    name: 'Renly Mlyren',
     number: '44',
     img: 'https://i.imgur.com/gyBh4JJ.png',
     position: 'RP',
