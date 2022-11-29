@@ -121,6 +121,11 @@ app.post('/fa', (req, res) => {
 
 // Read Route - Home Index
 app.get('/', (req, res) => {
+        res.render('landing.ejs', {players:player, currentUser: req.session.currentUser})
+})
+
+// Read Route - Home Index
+app.get('/home', (req, res) => {
     Player.find({}, (err, player) => {
         res.render('index.ejs', {players:player, currentUser: req.session.currentUser})
     })
