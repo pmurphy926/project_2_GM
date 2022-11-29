@@ -627,4 +627,8 @@ input {
         font-size: 1.3em;
     }
 
+    .logged-in-home {
+        z-index: 3;
+    }
+
 }
