@@ -92,6 +92,21 @@ button:hover, .submitBtn:hover {
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing-box {
+    border: 2px solid #399098;
+    width: 40%;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 header {
     display: grid;
     grid-template-columns: 4fr 1fr .2fr;

@@ -119,9 +119,9 @@ app.post('/fa', (req, res) => {
     })
 })
 
-// Read Route - Home Index
+// Landing Page
 app.get('/', (req, res) => {
-        res.render('landing.ejs', {players:player, currentUser: req.session.currentUser})
+        res.render('landing.ejs')
 })
 
 // Read Route - Home Index
