@@ -1,11 +1,10 @@
 # General Manager
-
-## User Experience
 Welcome to General Manager, your all-in-one tool for managing your baseball franchise. 
 
+## User Experience
 If you're looking to rebuild your roster for the upcoming season, General Manager features the latest free agents for you to choose from.
 
-Using the handy search bar located at the top of the page, you can search by position in order to see who is available. Check out your roster on the home page - there seems to be a hole in your infield defense! Try typing **"SS"** (*without the quotes*) into the **search bar** and check out which free agents are available for you to sign! Once you've made your choice, set the terms of the contract by clicking on the player's name, then clicking the "edit" button on the following page. There, you can decide the contract length (in years) and yearly salary (in dollars) for that player. **Make sure you check the "Contract"** checkbox first! Now, take a look at your home page - your new shortstop looks right at home between second and third.
+Using the handy search bar located at the top of the page, you can search by position in order to see who is available. Check out your roster on the home page - there seems to be a hole in your infield defense! Try typing **"SS"** (*without the quotes*) into the **search bar** and check out which free agents are available for you to sign! Once you've made your choice, set the terms of the contract by clicking on the player's name, then clicking the "edit" button on the following page. There, you can decide the contract length (in years) and yearly salary (in dollars) for that player. **Make sure you check the "Contract" checkbox first**! Now, take a look at your home page - your new shortstop looks right at home between second and third.
 
 If you're looking to fill out your bench and bullpen with free agents, you follow the same process, but **don't** click the checkbox labeled "starter". Once given a contract, but not a starting position, this player will appear on your bench. When the season rolls around, you'll be able to pinch hit, pinch run, upgrade your defense, or spell one of your regulars whenever you like.
 
