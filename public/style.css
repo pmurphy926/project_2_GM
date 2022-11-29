@@ -90,8 +90,9 @@ button:hover, .submitBtn:hover {
     display: none;
 }
 
-/* Header
+/* Login Page
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* I wanted this at the center of the page but couldn't factor it. */
 .landing-container {
     display: flex;
     justify-content: center;
@@ -100,9 +101,9 @@ button:hover, .submitBtn:hover {
 
 .landing-box {
     border: 2px solid #399098;
-    width: 40%;
+    width: 30%;
     text-align: center;
-    padding-bottom: 10px;
+    padding: 5% 0 5% 0;
 }
 
 /* Header
@@ -168,7 +169,6 @@ header h1 {
 .baseball-diamond {
     text-align: center;
     margin-top: 2%;
-    position: fixed;
 }
 
 .baseball-diamond-image {
@@ -605,4 +605,10 @@ input {
         z-index: 3;
     }
 
+    .landing-box {
+        border: 2px solid #399098;
+        width: 50%;
+        text-align: center;
+        padding: 5% 3% 5% 3%;
+    }
 }
