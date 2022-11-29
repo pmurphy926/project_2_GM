@@ -198,9 +198,7 @@ app.put('/gm/:id', (req, res) => {
 //Delete - Retire Player
 app.delete('/gm/:id', (req, res) => {
     Player.findByIdAndRemove(req.params.id, (err, data)=>{
-        res.redirect('/roster', {
-            currentUser: req.session.currentUser
-        })
+        res.redirect('/roster')
     })
 })
 

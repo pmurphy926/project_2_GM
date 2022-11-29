@@ -441,7 +441,7 @@ module.exports = [
     hands: 'L/R',
     height: `6'0"`,
     weight: 230,
-    age: 30,
+    age: 38,
     slash: `.229/.301/.388`,
     contract: false,
     years: 0,
