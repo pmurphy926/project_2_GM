@@ -1,37 +1,15 @@
-//Hamburger Animation (source: W3)
-//–––––––––––––––––––––––––––––––––––––––––––––––––– 
-// Play
-function myFunction(x) {
-    x.classList.toggle("change");
-  }
-//turns off animation for mobile
-if (window.matchMedia('(max-width: 860px)').matches) {
-  function myFunction() {
-      return false;
-  }
-} else {}
+// //Hamburger Nav and Dropdown
+// //–––––––––––––––––––––––––––––––––––––––––––––––––– 
+const dropdown = document.getElementById("hamburger")
 
-//Dropdown display (source: W3)
-//––––––––––––––––––––––––––––––––––––––––––––––––––
-//Open
-const dropdown = document.getElementById("hamburger");
-const dropdownContent = document.getElementById("myDropdown");
-
-dropdown.addEventListener("click", function() {dropdownContent.classList.toggle("show")})
-
-//Close
-window.onclick = function(event) {
-  if (!event.target.matches('.dropBtn')) {
-    let dropdowns = document.getElementsByClassName("dropdown-content");
-    let i;
-    for (i = 0; i < dropdowns.length; i++) {
-      let openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
+function toggleDropdown () {
+  const hamburger = document.getElementById("hamburger");
+  const dropdownContent = document.getElementById("myDropdown");
+  hamburger.classList.toggle("change");
+  dropdownContent.classList.toggle("show");
 }
+
+dropdown.addEventListener("click", toggleDropdown);
 
 /* Carousel
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
