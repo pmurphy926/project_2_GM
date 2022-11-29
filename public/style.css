@@ -35,6 +35,10 @@ a:hover {
     color: rgb(239, 76, 41);
 }
 
+.log-out:hover {
+    color: rgb(239, 76, 41);
+}
+
 a:visited {
     color: #60c3cc;
 }

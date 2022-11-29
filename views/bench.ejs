@@ -19,11 +19,10 @@
                 <a class="dropdown-links" href="/">Home</a>
                 <a class="dropdown-links" href="/roster">Roster</a>
                 <a class="dropdown-links" href="/fa">Free Agents</a>
-                <a class="dropdown-links" href="/bench">Bench</a>
                 <a class="dropdown-links" href="/gm/new">Add Player</a>
                 <% if (currentUser) { %>
                     <form action="/sessions?_method=DELETE" method="POST">
-                        <input type="submit" value="Log Out"/>
+                        <input class="log-out" type="submit" value="Log Out"/>
                       </form>
                 <% } else { %>
                     <a class="dropdown-links" href="/users/new">Sign Up</a>
@@ -46,8 +45,8 @@
                         <th>Weight</th>
                     </tr>
                     <%for (let i= 0; i < players.length; i++) {%>
-                    <tr>
                         <% if (players[i].contract === true && players[i].starter === false) {%>
+                    <tr>
                         <td class="player-thumb">
                             <img class="player-index-image" src="<%=players[i].img%>" alt="AI generated picture of a baseball player">
                         </td>
