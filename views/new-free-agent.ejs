@@ -33,6 +33,9 @@
         </div>
     </header>
     <main>
+        <% if (currentUser) { %>
+            <p class="logged-in">Logged in as <%= currentUser.username %></p>
+        <% }%>
         <div class="form-center">
             <form action="/fa" method="POST">
                 <input type="text" name="name" placeholder="First and Last Name">

@@ -14,9 +14,10 @@ if (window.matchMedia('(max-width: 860px)').matches) {
 //Dropdown display (source: W3)
 //––––––––––––––––––––––––––––––––––––––––––––––––––
 //Open
-function openDropdown() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
+const dropdown = document.getElementById("hamburger");
+const dropdownContent = document.getElementById("myDropdown");
+
+dropdown.addEventListener("click", function() {dropdownContent.classList.toggle("show")})
 
 //Close
 window.onclick = function(event) {

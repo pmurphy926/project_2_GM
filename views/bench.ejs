@@ -10,7 +10,7 @@
             <input class="search" type="text" name="position" placeholder="Search by position">
         </form>
         <div class="dropdown">
-            <div class="dropBtn" onclick="myFunction(this); openDropdown()">
+            <div id="hamburger" class="dropBtn" onclick="myFunction(this)">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -32,6 +32,9 @@
         </div>
     </header>
     <main>
+        <% if (currentUser) { %>
+            <p class="logged-in">Logged in as <%= currentUser.username %></p>
+        <% }%>
         <div class="players">
             <a href="/gm/new"><button class="new-btn">Add New Player</button></a>
             <table class="player-index-table">

@@ -26,9 +26,14 @@ th {
     color: rgb(239, 76, 41);
 }
 
-p, a, td, button {
+p, td, button {
     font-family: 'Barlow', sans-serif;
     color: white;
+}
+
+a {
+    font-family: 'Barlow', sans-serif;
+    color:#60c3cc;
 }
 
 a:hover {
@@ -112,6 +117,10 @@ header h1 {
 
 ::placeholder {
     color: rgb(239, 76, 41);
+}
+
+.logged-in-home {
+    position: absolute;
 }
 
 /* Hamburger (styling and js adapted from W3schools)

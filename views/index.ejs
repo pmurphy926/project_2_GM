@@ -32,6 +32,9 @@
             </div>
         </div>
     </header>
+    <% if (currentUser) { %>
+        <p class="logged-in-home">Logged in as <%= currentUser.username %></p>
+    <% }%>
         <div class="baseball-diamond">
             <img class="baseball-diamond-image" src="/field.png" alt="baseball diamond">
         </div>

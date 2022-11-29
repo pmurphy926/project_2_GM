@@ -33,6 +33,10 @@
         </div>
     </header>
     <main>
+        <% if (currentUser) { %>
+            <p class="logged-in">Logged in as <%= currentUser.username %></p>
+        <% }%>
+        <p><%  currentUser %></p>
         <div class="show-heading">
             <h2><%=players.name%> #<%=players.number%></h2>
             <%if (players.contract === false) {%>

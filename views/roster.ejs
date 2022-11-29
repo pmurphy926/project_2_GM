@@ -32,6 +32,9 @@
         </div>
     </header>
     <main>
+        <% if (currentUser) { %>
+            <p class="logged-in">Logged in as <%= currentUser.username %></p>
+        <% }%>
         <div class="players">
             <a href="/gm/new"><button class="new-btn">Add New Player</button></a>
             <table class="player-index-table">
