@@ -79,9 +79,7 @@ app.get('/destroy-route', () => {
 //************************ROUTES**********************/
 //Create - New Signed Player
 app.get('/gm/new', (req, res) => {
-    res.render('new.ejs', {
-        currentUser: req.session.currentUser
-    })
+    res.render('new.ejs')
 })
 
 //Create - New Free Agent
