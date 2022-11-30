@@ -100,9 +100,7 @@ app.post('/roster', (req, res) => {
         req.body.starter = false;
     }
     Player.create(req.body, (err, data) => {
-            res.redirect('/roster', {
-                currentUser: req.session.currentUser
-            });
+            res.redirect('/roster');
     })
 })
 
