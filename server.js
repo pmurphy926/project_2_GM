@@ -111,9 +111,7 @@ app.post('/roster', (req, res) => {
 //Create - Post Free Agent
 app.post('/fa', (req, res) => {
     Player.create(req.body, (err, data) => {
-            res.redirect('/fa', {
-                currentUser: req.session.currentUser
-            });
+            res.redirect('/fa');
     })
 })
 
