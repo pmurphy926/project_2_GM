@@ -86,9 +86,7 @@ app.get('/gm/new', (req, res) => {
 
 //Create - New Free Agent
 app.get('/gm/newfa', (req, res) => {
-    res.render('new-free-agent.ejs', {
-        currentUser: req.session.currentUser
-    })
+    res.render('new-free-agent.ejs')
 })
 
 //Create - Post (Roster)
