@@ -79,12 +79,16 @@ app.get('/destroy-route', () => {
 //************************ROUTES**********************/
 //Create - New Signed Player
 app.get('/gm/new', (req, res) => {
-    res.render('new.ejs')
+    res.render('new.ejs', {
+        currentUser: req.session.currentUser
+    })
 })
 
 //Create - New Free Agent
 app.get('/gm/newfa', (req, res) => {
-    res.render('new-free-agent.ejs')
+    res.render('new-free-agent.ejs', {
+        currentUser: req.session.currentUser
+    })
 })
 
 //Create - Post (Roster)
@@ -100,7 +104,9 @@ app.post('/roster', (req, res) => {
         req.body.starter = false;
     }
     Player.create(req.body, (err, data) => {
-            res.redirect('/roster');
+            res.redirect('/roster', {
+                currentUser: req.session.currentUser
+            });
     })
 })
 
